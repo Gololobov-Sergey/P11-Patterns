@@ -2,48 +2,43 @@
 
 #include "Singleton.h"
 #include "Prototype.h"
+#include "Builder.h"
 
 using namespace std;
 
-void method(Animal* animal)
-{
-	animal->print();
-	Animal* an = animal->clone();
-	an->print();
-}
+
 
 
 int main()
 {
-	Animal* a1 = new Cat("Tom", 5);
-	Animal* a2 = new Cat("Murka", 10);
-	Animal* a3 = new Dog("Sharik");
-	Animal* a4 = new Dog("Bobik");
+	Director* director = new Director();
 
-	Animal* a5 = a4->clone();
-	a5->setName("Tuzik");
+	MCBuilder* builder = new MCBuilder();
+	//=====================================
+	//director->changeBuilder(builder);
+	//director->make("maxiMC");
 
-	//a4->print();
-	//a5->print();
-
-	PrototypeRegistry pr;
-	pr.add(a1);
-	pr.add(a2);
-	pr.add(a3);
-	pr.add(a4);
-	pr.add(a5);
-
-	pr.getByName("Sharik")->print();
-
-	
-
-	Animal* a6 = pr.getByName("Murka");
-
-	delete a2;
-
-	a6->print();
+	builder->buildRadio();
+	builder->buildVinilDisk();
+	//=====================================
+	MusicCentr* mc = builder->getResult();
+	mc->info();
+	cout << endl;
 
 
 
-	//method(a4);
+	ManualMCBuilder* manualBuilder = new ManualMCBuilder();
+	//======================================
+	/*director->changeBuilder(manualBuilder);
+	director->make("maxiMC");*/
+
+	manualBuilder->buildRadio();
+	manualBuilder->buildVinilDisk();
+	//======================================
+	MCManual* mcmanual = manualBuilder->getResult();
+	cout << mcmanual->info() << endl;
+
+	/*director->make("maxiMC");
+	MusicCentr* bigMC = builder->getResult();
+	bigMC->info();*/
 }

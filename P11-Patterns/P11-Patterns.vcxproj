@@ -130,6 +130,7 @@
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Builder.h" />
     <ClInclude Include="Prototype.h" />
     <ClInclude Include="Singleton.h" />
   </ItemGroup>
