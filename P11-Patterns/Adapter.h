@@ -51,6 +51,7 @@ public:
 
 	virtual void drive() override
 	{
+		//
 		camel->move();
 	}
 };
