@@ -92,3 +92,14 @@ public:
 		}
 	}
 };
+
+
+//int main()
+//{
+//	SetConsoleOutputCP(1251);
+//
+//	//HClient* client = new HClient(new EconomistHandler(new BuchgalterHandler(new DirectorHandler(nullptr))));
+//	HClient* client = new HClient(new EconomistHandler(new DirectorHandler(nullptr)));
+//	client->pay(1500);
+//
+//}

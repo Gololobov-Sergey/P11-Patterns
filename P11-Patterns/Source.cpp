@@ -13,6 +13,10 @@
 #include "Flyweight.h"
 #include "Proxy.h"
 #include "Chain of Responsibility.h"
+#include "Command.h"
+#include "Observer.h"
+#include "Memento.h"
+#include "Strategy.h"
 
 using namespace std;
 
@@ -23,8 +27,10 @@ int main()
 {
 	SetConsoleOutputCP(1251);
 
-	//HClient* client = new HClient(new EconomistHandler(new BuchgalterHandler(new DirectorHandler(nullptr))));
-	HClient* client = new HClient(new EconomistHandler(new DirectorHandler(nullptr)));
-	client->pay(1500);
+	Navigator* navi = new Navigator;
+	navi->setStrategy(new OnAutoStrategy());
+	navi->getRoute(10);
 
+
+	//Strategy* strategy
 }
