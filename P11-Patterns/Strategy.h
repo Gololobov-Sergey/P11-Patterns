@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include <stack>
 
 
 using namespace std;
@@ -69,3 +68,14 @@ public:
 		////
 	}
 };
+
+
+//int main()
+//{
+//	SetConsoleOutputCP(1251);
+//
+//	Navigator* navi = new Navigator;
+//	navi->setStrategy(new OnAutoStrategy());
+//	navi->getRoute(10);
+//
+//}
