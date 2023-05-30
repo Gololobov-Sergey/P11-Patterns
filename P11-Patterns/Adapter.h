@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 
 
@@ -17,7 +17,7 @@ class Auto : public ITransport
 public:
 	virtual void drive() override
 	{
-		cout << "Àâò³âêà ¿äå ïî äîðîç³" << endl;
+		cout << "ÐÐ²Ñ‚Ñ–Ð²ÐºÐ° Ñ—Ð´Ðµ Ð¿Ð¾ Ð´Ð¾Ñ€Ð¾Ð·Ñ–" << endl;
 	}
 };
 
@@ -37,7 +37,7 @@ class Camel
 public:
 	void move()
 	{
-		cout << "Âåðáëþä ³äå ïî ïóñòåë³" << endl;
+		cout << "Ð’ÐµÑ€Ð±Ð»ÑŽÐ´ Ñ–Ð´Ðµ Ð¿Ð¾ Ð¿ÑƒÑÑ‚ÐµÐ»Ñ–" << endl;
 	}
 };
 
@@ -61,7 +61,7 @@ class Horse
 public:
 	void jamp()
 	{
-		cout << "Ê³íü ñêà÷èòü ïî ë³ñó" << endl;
+		cout << "ÐšÑ–Ð½ÑŒ ÑÐºÐ°Ñ‡Ð¸Ñ‚ÑŒ Ð¿Ð¾ Ð»Ñ–ÑÑƒ" << endl;
 	}
 };
 
