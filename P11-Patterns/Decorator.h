@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 
 
@@ -25,7 +25,7 @@ public:
 class ItalianPizza : public Pizza
 {
 public:
-	ItalianPizza() : Pizza("²òàë³éñüêà ï³ööà") 	{ }
+	ItalianPizza() : Pizza("Ð†Ñ‚Ð°Ð»Ñ–Ð¹ÑÑŒÐºÐ° Ð¿Ñ–Ñ†Ñ†Ð°") 	{ }
 
 	virtual int getPrice() override
 	{
@@ -52,7 +52,7 @@ class Tomato : public PizzaDecorator
 {
 public:
 	Tomato(Pizza* pizza) : 
-		PizzaDecorator(pizza->getName() + ", ç òîìàòàìè", pizza) {}
+		PizzaDecorator(pizza->getName() + ", Ð· Ñ‚Ð¾Ð¼Ð°Ñ‚Ð°Ð¼Ð¸", pizza) {}
 
 	virtual int getPrice() override
 	{
@@ -65,7 +65,7 @@ class Cheese : public PizzaDecorator
 {
 public:
 	Cheese(Pizza* pizza) :
-		PizzaDecorator(pizza->getName() + ", ç ñèðîì", pizza) {}
+		PizzaDecorator(pizza->getName() + ", Ð· ÑÐ¸Ñ€Ð¾Ð¼", pizza) {}
 
 	virtual int getPrice() override
 	{
@@ -79,7 +79,7 @@ class Becon : public PizzaDecorator
 {
 public:
 	Becon(Pizza* pizza) :
-		PizzaDecorator(pizza->getName() + ", ç áåêîíîì", pizza) {}
+		PizzaDecorator(pizza->getName() + ", Ð· Ð±ÐµÐºÐ¾Ð½Ð¾Ð¼", pizza) {}
 
 	virtual int getPrice() override
 	{
